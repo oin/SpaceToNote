@@ -12,6 +12,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E5449F11F87E8E80068C015 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6EE9886D1F87BA8D00AC714F /* SpaceToNote.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceToNote.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE988701F87BA8D00AC714F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE988761F87BAC300AC714F /* JRSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		6EE988641F87BA8D00AC714F = {
 			isa = PBXGroup;
 			children = (
+				6E5449F11F87E8E80068C015 /* README.md */,
 				6EE9886F1F87BA8D00AC714F /* SpaceToNote */,
 				6EE9886E1F87BA8D00AC714F /* Products */,
 			);
