@@ -6,9 +6,18 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6EE9887A1F87BB4F00AC714F /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE988781F87BAC400AC714F /* JRSwizzle.m */; };
+		6EE9887B1F87BB4F00AC714F /* SpaceToNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE988771F87BAC400AC714F /* SpaceToNote.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		6EE9886D1F87BA8D00AC714F /* SpaceToNote.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceToNote.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE988701F87BA8D00AC714F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EE988761F87BAC300AC714F /* JRSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		6EE988771F87BAC400AC714F /* SpaceToNote.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceToNote.m; sourceTree = "<group>"; };
+		6EE988781F87BAC400AC714F /* JRSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		6EE988791F87BAC500AC714F /* SpaceToNote.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceToNote.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +51,10 @@
 			isa = PBXGroup;
 			children = (
 				6EE988701F87BA8D00AC714F /* Info.plist */,
+				6EE988761F87BAC300AC714F /* JRSwizzle.h */,
+				6EE988781F87BAC400AC714F /* JRSwizzle.m */,
+				6EE988791F87BAC500AC714F /* SpaceToNote.h */,
+				6EE988771F87BAC400AC714F /* SpaceToNote.m */,
 			);
 			path = SpaceToNote;
 			sourceTree = "<group>";
@@ -113,6 +126,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE9887A1F87BB4F00AC714F /* JRSwizzle.m in Sources */,
+				6EE9887B1F87BB4F00AC714F /* SpaceToNote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +245,7 @@
 				DEVELOPMENT_TEAM = CMN6HGG8LK;
 				INFOPLIST_FILE = SpaceToNote/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = name.oin.steforce.SpaceToNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -245,6 +261,7 @@
 				DEVELOPMENT_TEAM = CMN6HGG8LK;
 				INFOPLIST_FILE = SpaceToNote/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = name.oin.steforce.SpaceToNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
