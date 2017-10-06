@@ -11,6 +11,10 @@ It merely provides another way to use an existing feature in both programs, but 
 Who knows, you might end up with a better perspective on whatever you're doing with these applications.
 This could have real-life consequences!
 
+## Get it
+
+Download the [latest release](https://github.com/oin/SpaceToNote/releases).
+
 ## Installation
 
 Make sure you have SIMBL (or [mySIMBL](https://github.com/w0lfschild/mySIMBL), or whatever flavor) installed, put [SpaceToNote.bundle](https://github.com/oin/SpaceToNote/releases) in `/Library/Application Support/SIMBL/Plugins`, and restart Curio or Tinderbox.
