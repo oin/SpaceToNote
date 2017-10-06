@@ -68,8 +68,8 @@ BOOL SpaceToNoteCurioIsQuickLookVisible() {
 {
 	CFAbsoluteTime now = CFAbsoluteTimeGetCurrent();
 	NSEventModifierFlags flags = [NSEvent modifierFlags];
-	if((flags & NSEventModifierFlagControl) != 0 || ((flags & NSEventModifierFlagShift) != 0 && (flags & NSEventModifierFlagOption) != 0)) {
-		// If we hit Ctrl+Space or Shift+Option+Space, then just show the notes window.
+	if((flags & NSEventModifierFlagControl) != 0) {
+		// If we hit Ctrl+Space (or Ctrl+othermodifier+Space), then just show the notes window.
 		[self stn_curio_showNotesWindow];
 		SpaceToNoteCurioLastTimeQuickSpacebar = 0;
 	} else {
