@@ -2,7 +2,7 @@
 
 A [SIMBL](https://en.wikipedia.org/wiki/SIMBL) plug-in that provides small enhancements to the following applications:
 
- - [Curio 10](https://www.zengobi.com/curio/), a freeform notebook environment
+ - [Curio 9+](https://www.zengobi.com/curio/), a freeform notebook environment
  - [Tinderbox 7](http://www.eastgate.com/Tinderbox/), a _tool for notes_ to visualize, analyze, and share ideas.
 
 In these applications, the plug-in adds the ability to summon a rich text or note window by just pressing the `SPACE` bar, also known as the largest key on your keyboard.
