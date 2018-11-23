@@ -39,6 +39,7 @@ BOOL SpaceToNoteCurioDidObserveChange = NO;
 CFAbsoluteTime SpaceToNoteCurioLastTimeQuickSpacebar = 0;
 BOOL SpaceToNoteCurioSpaceWasPressed = NO;
 CFAbsoluteTime SpaceToNoteCurioLastTimeSpaceWasPressed = 0;
+BOOL SpaceToNoteDidMakeNotesWindowAppear = NO;
 
 BOOL SpaceToNoteCurioIsQuickLookVisible() {
 	if([QLPreviewPanel sharedPreviewPanelExists]) {
@@ -51,8 +52,8 @@ BOOL SpaceToNoteCurioIsQuickLookVisible() {
 -(void)stnswizzled_curio_handleQuickSpacebarPressRelease;
 -(void)stnswizzled_curio_didChange;
 -(void)stnswizzled_curio_didChangeRect:(CGRect)rect;
--(void)stnswizzled_keyDown:(NSEvent *)event;
--(void)stnswizzled_keyUp:(NSEvent *)event;
+-(void)stnswizzled_curio_keyDown:(NSEvent *)event;
+-(void)stnswizzled_curio_keyUp:(NSEvent *)event;
 @end
 
 @implementation NSView (SpaceToNoteSwizzling)
@@ -60,18 +61,39 @@ BOOL SpaceToNoteCurioIsQuickLookVisible() {
 {
 	if([self respondsToSelector:@selector(projectController)]) {
 		id projectController = [self performSelector:@selector(projectController)];
-		id notesInspectorController = [projectController performSelector:@selector(notesInspectorController)];
-		[notesInspectorController performSelector:@selector(showNotesWindow:) withObject:nil];
+		id notesInspectorController = nil;
+		if([projectController respondsToSelector:@selector(notesInspectorController)]) {
+			notesInspectorController = [projectController performSelector:@selector(notesInspectorController)];
+		} else if([projectController respondsToSelector:@selector(inspectorController)]) {
+			id inspectorController = [projectController performSelector:@selector(inspectorController)];
+			if([inspectorController respondsToSelector:@selector(controllerWithName:)]) {
+				notesInspectorController = [inspectorController performSelector:@selector(controllerWithName:) withObject:@"NotesInspectorController"];
+			} else {
+				NSLog(@"InspectorController does not respond to -controllerWithName:");
+			}
+		}
+		
+		if(!notesInspectorController) {
+			NSLog(@"No NotesInspectorController found.");
+			return;
+		}
+		
+		if([notesInspectorController respondsToSelector:@selector(showNotesWindow:)]) {
+			[notesInspectorController performSelector:@selector(showNotesWindow:) withObject:nil];
+		} else {
+			NSLog(@"NotesInspectorController does not respond to -showNotesWindow:.");
+		}
 	}
 }
 -(void)stnswizzled_curio_handleQuickSpacebarPressRelease
 {
 	CFAbsoluteTime now = CFAbsoluteTimeGetCurrent();
-	NSEventModifierFlags flags = [NSEvent modifierFlags];
-	if((flags & NSEventModifierFlagControl) != 0) {
+	NSUInteger flags = [NSEvent modifierFlags];
+	if((flags & NSControlKeyMask) != 0) {
 		// If we hit Ctrl+Space (or Ctrl+othermodifier+Space), then just show the notes window.
 		[self stn_curio_showNotesWindow];
 		SpaceToNoteCurioLastTimeQuickSpacebar = 0;
+		SpaceToNoteDidMakeNotesWindowAppear = YES;
 	} else {
 		// Else, we should only show the notes window if nothing else has changed.
 		SpaceToNoteCurioDidObserveChange = NO;
@@ -101,8 +123,14 @@ BOOL SpaceToNoteCurioIsQuickLookVisible() {
 		SpaceToNoteCurioDidObserveChange = YES;
 	}
 }
+#define STN_KEYCODE_LEFT 123
+#define STN_KEYCODE_RIGHT 124
+#define STN_KEYCODE_UP 126
+#define STN_KEYCODE_DOWN 125
+#define STN_KEYCODE_TAB 48
 -(void)stnswizzled_curio_keyDown:(NSEvent *)event
 {
+	// SpaceToNote
 	if(![event isARepeat]) {
 		SpaceToNoteCurioSpaceWasPressed = [event keyCode] == 49;
 		if(SpaceToNoteCurioSpaceWasPressed) {
@@ -111,10 +139,41 @@ BOOL SpaceToNoteCurioIsQuickLookVisible() {
 			SpaceToNoteCurioLastTimeSpaceWasPressed = 0;
 		}
 	}
+	
+	// Figure selection: DOESN'T WORK (it seems that these methods only work within collection figures)
+	// -IdeaSpaceView selectNextFigure
+	// -IdeaSpaceView selectPreviousFigure
+	// -IdeaSpaceView selectUpFigure
+	// -IdeaSpaceView selectDownFigure
+//	unsigned short code = event.keyCode;
+//	if(code == STN_KEYCODE_TAB) {
+//		NSLog(@"tab");
+//		NSUInteger flags = event.modifierFlags;
+//		BOOL ctrl = (flags & NSControlKeyMask) != 0;
+//		BOOL alt = (flags & NSAlternateKeyMask) != 0;
+//		BOOL shift = (flags & NSShiftKeyMask) != 0;
+//		BOOL cmd = (flags & NSCommandKeyMask) != 0;
+//		if(!ctrl && !alt && !cmd) {
+//			SEL which = @selector(selectNextFigure);
+//			if(shift) {
+//				which = @selector(selectPreviousFigure);
+//			}
+//			if([self respondsToSelector:which]) {
+//				((void (*)(id, SEL))[self methodForSelector:which])(self, which);
+//				 // cf. https://stackoverflow.com/a/20058585
+//			} else {
+//				NSLog(@"doesn't respond to selector");
+//			}
+//			return;
+//		}
+//	}
+	// /Figure selection
+	
 	[self stnswizzled_curio_keyDown:event];
 }
 -(void)stnswizzled_curio_keyUp:(NSEvent *)event
 {
+	BOOL shouldMakeLastCheck = NO;
 	BOOL spacePressed = [event keyCode] == 49;
 	if(SpaceToNoteCurioSpaceWasPressed && spacePressed && CFAbsoluteTimeGetCurrent() - SpaceToNoteCurioLastTimeSpaceWasPressed < 0.3) {
 		if([self respondsToSelector:@selector(singleSelectedAssetFigure)]) {
@@ -122,11 +181,19 @@ BOOL SpaceToNoteCurioIsQuickLookVisible() {
 			if(!selectedAsset) {
 				[self stn_curio_showNotesWindow];
 			}
+		} else {
+			shouldMakeLastCheck = YES;
 		}
 	}
 	SpaceToNoteCurioSpaceWasPressed = NO;
 	SpaceToNoteCurioLastTimeSpaceWasPressed = 0;
+	SpaceToNoteDidMakeNotesWindowAppear = NO;
 	[self stnswizzled_curio_keyUp:event];
+	if(shouldMakeLastCheck && !SpaceToNoteDidMakeNotesWindowAppear) {
+		if(![self.window.firstResponder isKindOfClass:[NSTextView class]]) {
+			[self stn_curio_showNotesWindow];
+		}
+	}
 }
 @end
 
