@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6EE747B621A879BC00FA6377 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE747B321A879BC00FA6377 /* JRSwizzle.m */; };
+		6EE747B721A879BC00FA6377 /* SpaceToNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE747B521A879BC00FA6377 /* SpaceToNote.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6EE747A821A8798400FA6377 /* SpaceToNote.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceToNote.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE747AC21A8798400FA6377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EE747B221A879BC00FA6377 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		6EE747B321A879BC00FA6377 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		6EE747B421A879BC00FA6377 /* SpaceToNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceToNote.h; sourceTree = "<group>"; };
+		6EE747B521A879BC00FA6377 /* SpaceToNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceToNote.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6EE747A521A8798400FA6377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6EE7479F21A8798400FA6377 = {
+			isa = PBXGroup;
+			children = (
+				6EE747AA21A8798400FA6377 /* SpaceToNote */,
+				6EE747A921A8798400FA6377 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6EE747A921A8798400FA6377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EE747A821A8798400FA6377 /* SpaceToNote.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EE747AA21A8798400FA6377 /* SpaceToNote */ = {
+			isa = PBXGroup;
+			children = (
+				6EE747B221A879BC00FA6377 /* JRSwizzle.h */,
+				6EE747B321A879BC00FA6377 /* JRSwizzle.m */,
+				6EE747B421A879BC00FA6377 /* SpaceToNote.h */,
+				6EE747B521A879BC00FA6377 /* SpaceToNote.m */,
+				6EE747AB21A8798400FA6377 /* Supporting Files */,
+			);
+			path = SpaceToNote;
+			sourceTree = "<group>";
+		};
+		6EE747AB21A8798400FA6377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EE747AC21A8798400FA6377 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6EE747A721A8798400FA6377 /* SpaceToNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EE747AF21A8798400FA6377 /* Build configuration list for PBXNativeTarget "SpaceToNote" */;
+			buildPhases = (
+				6EE747A421A8798400FA6377 /* Sources */,
+				6EE747A521A8798400FA6377 /* Frameworks */,
+				6EE747A621A8798400FA6377 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpaceToNote;
+			productName = SpaceToNote;
+			productReference = 6EE747A821A8798400FA6377 /* SpaceToNote.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6EE747A021A8798400FA6377 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "À la Bonne Sainte-Force";
+				TargetAttributes = {
+					6EE747A721A8798400FA6377 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 6EE747A321A8798400FA6377 /* Build configuration list for PBXProject "SpaceToNote-xc6" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6EE7479F21A8798400FA6377;
+			productRefGroup = 6EE747A921A8798400FA6377 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EE747A721A8798400FA6377 /* SpaceToNote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6EE747A621A8798400FA6377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6EE747A421A8798400FA6377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE747B621A879BC00FA6377 /* JRSwizzle.m in Sources */,
+				6EE747B721A879BC00FA6377 /* SpaceToNote.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6EE747AD21A8798400FA6377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.9;
+			};
+			name = Debug;
+		};
+		6EE747AE21A8798400FA6377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx10.9;
+			};
+			name = Release;
+		};
+		6EE747B021A8798400FA6377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				INFOPLIST_FILE = SpaceToNote/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		6EE747B121A8798400FA6377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				INFOPLIST_FILE = SpaceToNote/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6EE747A321A8798400FA6377 /* Build configuration list for PBXProject "SpaceToNote-xc6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE747AD21A8798400FA6377 /* Debug */,
+				6EE747AE21A8798400FA6377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EE747AF21A8798400FA6377 /* Build configuration list for PBXNativeTarget "SpaceToNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE747B021A8798400FA6377 /* Debug */,
+				6EE747B121A8798400FA6377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6EE747A021A8798400FA6377 /* Project object */;
+}

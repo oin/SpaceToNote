@@ -7,11 +7,11 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<string>name.oin.steforce.SpaceToNote</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>SpaceToNote</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
@@ -27,18 +27,18 @@
 		<dict>
 			<key>BundleIdentifier</key>
 			<string>com.zengobi.curio</string>
-			<key>MinBundleVersion</key>
-			<string>0</string>
 			<key>MaxBundleVersion</key>
 			<string>99999999</string>
+			<key>MinBundleVersion</key>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>BundleIdentifier</key>
 			<string>com.eastgate.Tinderbox-7</string>
-			<key>MinBundleVersion</key>
-			<string>0</string>
 			<key>MaxBundleVersion</key>
 			<string>99999999</string>
+			<key>MinBundleVersion</key>
+			<string>0</string>
 		</dict>
 	</array>
 </dict>
